@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px; /* Настройте размер по вашему усмотрению */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 50px;
+}
+
+nav {
+    background-color: #f0f0f0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10;
+    margin: 10;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Регулируйте отступ сверху по вашему усмотрению */
+}
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image p {
+    margin-top: 5px;
+}
+
+
+nav li {
+    margin: 0 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+section {
+    padding: 25px 0; /* Увеличен отступ сверху для секции */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons img {
+    max-width: 30px;
+    margin: 0 5px;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Стили для экранов меньше 768px (стандартный порог для телефонов) */
+@media (max-width: 768px) {
+    section {
+        margin: 10px; /* Уменьшаем отступ на мобильных устройствах */
+    }
+}
+ 
+
+.floating-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 1000;
+}
+
+.floating-menu li {
+    margin-left: 20px;
+}
+
+.floating-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+#procedure img {
+     width: 300px; /* Установите желаемую ширину для изображений */
+    height: 200px; /* Установите желаемую высоту для изображений */
+    border-radius: 10px; /* Установите желаемый радиус закругления углов */
+    object-fit: cover; /* Сохраняйте соотношение сторон и обрезайте изображение, чтобы оно заполняло заданный размер */
+}
+
+h1, h2 {
+    text-align: center;
+}
+body {
+    overflow-y: scroll; /* Добавляет вертикальную полосу прокрутки */
+}
