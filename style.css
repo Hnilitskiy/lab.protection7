@@ -24,8 +24,8 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 10px 0; /* Исправлено значение padding */
-    margin: 0; /* Исправлено значение margin */
+    padding: 10px 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -37,17 +37,17 @@ nav ul {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* Добавлено для мобильных устройств */
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
 }
 
 .image {
     text-align: center;
-    width: 100%; /* Добавлено для мобильных устройств */
     box-sizing: border-box;
     padding: 5px;
-    margin-bottom: 20px; /* Добавлено для мобильных устройств */
+    margin-bottom: 20px;
+    flex: 0 0 calc(25% - 20px); /* Четыре изображения в ряд с отступами для всех экранов */
 }
 
 .image img {
@@ -60,7 +60,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 20px; /* Изменено значение margin для мобильных устройств */
+    margin: 0 20px;
 }
 
 nav a {
@@ -81,12 +81,20 @@ section {
     }
 
     nav ul {
-        flex-direction: column; /* Изменено направление flex для мобильных устройств */
-        align-items: center; /* Выравнивание по центру для мобильных устройств */
+        flex-direction: column;
+        align-items: center;
     }
 
     nav li {
-        margin: 10px 0; /* Изменено значение margin для мобильных устройств */
+        margin: 10px 0;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .image {
+        flex: 0 0 calc(50% - 20px); /* Два изображения в ряд с отступами для меньших экранов */
     }
 }
 
@@ -136,7 +144,7 @@ footer {
 }
 
 #procedure img {
-    width: 100%; /* Изменено значение ширины для мобильных устройств */
+    width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
