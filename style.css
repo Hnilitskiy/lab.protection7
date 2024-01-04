@@ -48,11 +48,13 @@ nav ul {
     padding: 5px;
     margin-bottom: 20px;
     flex: 0 0 calc(25% - 20px); /* Четыре изображения в ряд с отступами для всех экранов */
+    border-radius: 10px; /* Закругление углов */
 }
 
 .image img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px; /* Закругление углов */
 }
 
 .image p {
@@ -157,3 +159,4 @@ h1, h2 {
 body {
     overflow-y: scroll;
 }
+
