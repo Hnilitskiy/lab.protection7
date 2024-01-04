@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
-    font-size: 20px; /* Настройте размер по вашему усмотрению */
+    font-size: 20px;
 }
 
 header {
@@ -24,11 +24,10 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 10;
-    margin: 10;
+    padding: 10px 0; /* Исправлено значение padding */
+    margin: 0; /* Исправлено значение margin */
     display: flex;
     justify-content: center;
-    padding: 10px 0;
 }
 
 .container {
@@ -38,12 +37,17 @@ nav ul {
 
 .gallery {
     display: flex;
+    flex-wrap: wrap; /* Добавлено для мобильных устройств */
     justify-content: space-between;
-    margin-top: 20px; /* Регулируйте отступ сверху по вашему усмотрению */
+    margin-top: 20px;
 }
 
 .image {
     text-align: center;
+    width: 100%; /* Добавлено для мобильных устройств */
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 20px; /* Добавлено для мобильных устройств */
 }
 
 .image img {
@@ -55,9 +59,8 @@ nav ul {
     margin-top: 5px;
 }
 
-
 nav li {
-    margin: 0 40px;
+    margin: 0 20px; /* Изменено значение margin для мобильных устройств */
 }
 
 nav a {
@@ -67,9 +70,24 @@ nav a {
     font-size: 18px;
 }
 
-
 section {
-    padding: 25px 0; /* Увеличен отступ сверху для секции */
+    padding: 25px 0;
+}
+
+/* Стили для экранов меньше 768px (стандартный порог для телефонов) */
+@media (max-width: 768px) {
+    section {
+        margin: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Изменено направление flex для мобильных устройств */
+        align-items: center; /* Выравнивание по центру для мобильных устройств */
+    }
+
+    nav li {
+        margin: 10px 0; /* Изменено значение margin для мобильных устройств */
+    }
 }
 
 footer {
@@ -91,19 +109,6 @@ footer {
 .contact-info p {
     margin: 5px 0;
 }
-
-section {
-    padding: 20px;
-    margin: 20px;
-}
-
-/* Стили для экранов меньше 768px (стандартный порог для телефонов) */
-@media (max-width: 768px) {
-    section {
-        margin: 10px; /* Уменьшаем отступ на мобильных устройствах */
-    }
-}
- 
 
 .floating-menu {
     position: fixed;
@@ -129,16 +134,18 @@ section {
     font-weight: bold;
     font-size: 18px;
 }
+
 #procedure img {
-     width: 300px; /* Установите желаемую ширину для изображений */
-    height: 200px; /* Установите желаемую высоту для изображений */
-    border-radius: 10px; /* Установите желаемый радиус закругления углов */
-    object-fit: cover; /* Сохраняйте соотношение сторон и обрезайте изображение, чтобы оно заполняло заданный размер */
+    width: 100%; /* Изменено значение ширины для мобильных устройств */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 h1, h2 {
     text-align: center;
 }
+
 body {
-    overflow-y: scroll; /* Добавляет вертикальную полосу прокрутки */
+    overflow-y: scroll;
 }
